@@ -3,7 +3,7 @@ import Game from './pages/game';
 import Auth from './pages/auth';
 import { io } from 'socket.io-client';
 import Home from './pages/home';
-const socket = io('http://localhost:3001');
+const socket = io('https://dhrumil-bingo-1hs1.onrender.com');
 function App() {
   return (
     <>

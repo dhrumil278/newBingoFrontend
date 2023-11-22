@@ -29,7 +29,10 @@ function Auth({ socket }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3001/login', data);
+      const res = await axios.post(
+        'https://dhrumil-bingo-1hs1.onrender.com/login',
+        data
+      );
 
       toast.success(res.data.data.message, {
         position: 'top-right',
