@@ -3,7 +3,9 @@ import Game from './pages/game';
 import Auth from './pages/auth';
 import { io } from 'socket.io-client';
 import Home from './pages/home';
-const socket = io('https://dhrumil-bingo-1hs1.onrender.com');
+import OtpVerification from './pages/otpVerification';
+const socket = io('https://dhrumil-bingo-1hs1.onrender.com'); // TODO Production
+// const socket = io('http://localhost:3001');
 function App() {
   return (
     <>
@@ -20,6 +22,10 @@ function App() {
           <Route
             path='/game'
             element={<Game socket={socket} />}
+          />
+          <Route
+            path='/otpVerification'
+            element={<OtpVerification socket={socket} />}
           />
         </Routes>
       </BrowserRouter>
